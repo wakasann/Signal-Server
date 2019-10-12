@@ -15,3 +15,8 @@ service/config/staging.yml
 service/config/testing.yml
 .opsmanage
 put.sh
+
+
+.project
+.settings
+.classpath

@@ -23,6 +23,8 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.S3ClientOptions;
 import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
+import com.amazonaws.regions.Regions; //new
+import com.amazonaws.regions.Region; //new
 
 import java.net.URL;
 import java.util.Date;
@@ -42,6 +44,11 @@ public class UrlSigner {
   public URL getPreSignedUrl(long attachmentId, HttpMethod method, boolean unaccelerated) {
     AmazonS3                    client  = new AmazonS3Client(credentials);
     GeneratePresignedUrlRequest request = new GeneratePresignedUrlRequest(bucket, String.valueOf(attachmentId), method);
+    
+    //Region usEast1 = Region.getRegion(Regions.US_EAST_1);
+    //client.setRegion(usEast1);
+    // change the main
+    client.setEndpoint("http://192.168.1.112:9000");
     
     request.setExpiration(new Date(System.currentTimeMillis() + DURATION));
     request.setContentType("application/octet-stream");

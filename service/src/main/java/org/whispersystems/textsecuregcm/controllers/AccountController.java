@@ -177,9 +177,9 @@ public class AccountController {
     if (testDevices.containsKey(number)) {
       // noop
     } else if (transport.equals("sms")) {
-      smsSender.deliverSmsVerification(number, client, verificationCode.getVerificationCodeDisplay());
+      //smsSender.deliverSmsVerification(number, client, verificationCode.getVerificationCodeDisplay());
     } else if (transport.equals("voice")) {
-      smsSender.deliverVoxVerification(number, verificationCode.getVerificationCode(), locale);
+      //smsSender.deliverVoxVerification(number, verificationCode.getVerificationCode(), locale);
     }
 
     metricRegistry.meter(name(AccountController.class, "create", Util.getCountryCode(number))).mark();
