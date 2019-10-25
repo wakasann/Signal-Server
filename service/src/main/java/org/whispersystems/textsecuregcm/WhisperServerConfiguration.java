@@ -33,12 +33,12 @@ import io.dropwizard.client.JerseyClientConfiguration;
 /** @noinspection MismatchedQueryAndUpdateOfCollection, WeakerAccess */
 public class WhisperServerConfiguration extends Configuration {
 
-  @NotNull
-  @Valid
-  @JsonProperty
-  private TwilioConfiguration twilio;
+//  @Null
+//  @Valid
+//  @JsonProperty
+//  private TwilioConfiguration twilio;
 
-  @NotNull
+  @Null
   @Valid
   @JsonProperty
   private PushConfiguration push;
@@ -136,18 +136,18 @@ public class WhisperServerConfiguration extends Configuration {
   @JsonProperty
   private ApnConfiguration apn;
 
-  @Valid
-  @NotNull
-  @JsonProperty
-  private UnidentifiedDeliveryConfiguration unidentifiedDelivery;
+//  @Valid
+//  @Null
+//  @JsonProperty
+//  private UnidentifiedDeliveryConfiguration unidentifiedDelivery;
+//
+//  @Valid
+//  @Null
+//  @JsonProperty
+//  private VoiceVerificationConfiguration voiceVerification;
 
   @Valid
-  @NotNull
-  @JsonProperty
-  private VoiceVerificationConfiguration voiceVerification;
-
-  @Valid
-  @NotNull
+  @Null
   @JsonProperty
   private RecaptchaConfiguration recaptcha;
 
@@ -157,17 +157,17 @@ public class WhisperServerConfiguration extends Configuration {
     return recaptcha;
   }
 
-  public VoiceVerificationConfiguration getVoiceVerificationConfiguration() {
-    return voiceVerification;
-  }
+//  public VoiceVerificationConfiguration getVoiceVerificationConfiguration() {
+//    return voiceVerification;
+//  }
 
   public WebSocketConfiguration getWebSocketConfiguration() {
     return webSocket;
   }
 
-  public TwilioConfiguration getTwilioConfiguration() {
-    return twilio;
-  }
+//  public TwilioConfiguration getTwilioConfiguration() {
+//    return twilio;
+//  }
 
   public PushConfiguration getPushConfiguration() {
     return push;
@@ -237,9 +237,9 @@ public class WhisperServerConfiguration extends Configuration {
     return profiles;
   }
 
-  public UnidentifiedDeliveryConfiguration getDeliveryCertificate() {
-    return unidentifiedDelivery;
-  }
+//  public UnidentifiedDeliveryConfiguration getDeliveryCertificate() {
+//    return unidentifiedDelivery;
+//  }
 
   public Map<String, Integer> getTestDevices() {
     Map<String, Integer> results = new HashMap<>();
