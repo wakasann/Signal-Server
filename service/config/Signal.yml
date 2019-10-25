@@ -3,7 +3,7 @@ twilio: # Twilio gateway configuration
   accountToken: d1ec5b0c74593aaffdcc7bde533a04f2 #fake
   numbers:  # Numbers allocated in Twilio
     - "+12055768747" #fake
-  messagingServicesId: 
+  messagingServicesId: ""
   localDomain: 192.168.1.168 # Domain Twilio can connect back to for calls. Should be domain of your service.
 
 push:
@@ -32,7 +32,7 @@ directory:
       - "redis://127.0.0.1:6379/4"
   client: # Configuration for interfacing with Contact Discovery Service cluster
     userAuthenticationTokenSharedSecret: test # hex-encoded secret shared with CDS used to generate auth tokens for Signal users
-    userAuthenticationTokenUserIdSecret: test# hex-encoded secret shared among Signal-Servers to obscure user phone numbers from CDS
+    userAuthenticationTokenUserIdSecret: test # hex-encoded secret shared among Signal-Servers to obscure user phone numbers from CDS
   sqs:
     accessKey: AKIAIOSFODNN7EXAMPLE    # AWS SQS accessKey
     accessSecret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY  # AWS SQS accessSecret
