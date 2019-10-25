@@ -23,13 +23,13 @@ turn: # TURN server configuration
 cache: # Redis server configuration for cache cluster
   url: "redis://127.0.0.1:6379/1"
   replicaUrls:
-    - "redis://redit:6379/2"
+    - "redis://127.0.0.1:6379/2"
 
 directory:
   redis: # Redis server configuration for directory cluster
-    url: "redis://redit:6379/3"
+    url: "redis://127.0.0.1:6379/3"
     replicaUrls:
-      - "redis://redit:6379/4"
+      - "redis://127.0.0.1:6379/4"
   client: # Configuration for interfacing with Contact Discovery Service cluster
     userAuthenticationTokenSharedSecret: test # hex-encoded secret shared with CDS used to generate auth tokens for Signal users
     userAuthenticationTokenUserIdSecret: test# hex-encoded secret shared among Signal-Servers to obscure user phone numbers from CDS

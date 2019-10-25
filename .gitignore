@@ -20,3 +20,4 @@ put.sh
 .project
 .settings
 .classpath
+/bin/
